@@ -1,5 +1,6 @@
 import React from 'react';
 import { Sparkles, CheckCircle2, Bot, Shield, FileText, ArrowRight } from 'lucide-react';
+import teamCollaborationImg from '../../assets/images/team_collaboration_tech_1792353150132.jpg';
 
 interface Props {
   onExploreJobs: () => void;
@@ -62,7 +63,10 @@ export const BenefitsSection: React.FC<Props> = ({ onExploreJobs, onOpenChat }) 
           <div className="lg:col-span-5 order-2 lg:order-1">
             <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-md aspect-4/3 bg-slate-100">
               <img
-                src="/src/assets/images/team_collaboration_tech_1792353150132.jpg"
+                src={teamCollaborationImg}
+                onError={(e) => {
+                  e.currentTarget.src = '/images/team_collaboration_tech_1792353150132.jpg';
+                }}
                 alt="Engineering team collaborating at Nexora Technologies"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Bot, X, Send, RotateCcw, Volume2, VolumeX, Maximize2, Minimize2, Sparkles, ChevronDown, CheckCircle2, User, ExternalLink } from 'lucide-react';
+import recruiterAvatarImg from '../../assets/images/avatar_recruiter_sarah_1792353150433.jpg';
 import { ChatMessage, Job } from '../../types';
 import { api } from '../../utils/api';
 
@@ -181,7 +182,10 @@ export const HirePilotChatbot: React.FC<Props> = ({
           <div className="relative">
             <div className="w-8 h-8 rounded-full overflow-hidden border border-teal-400/50 bg-slate-800 shrink-0">
               <img
-                src="/src/assets/images/avatar_recruiter_sarah_1792353150433.jpg"
+                src={recruiterAvatarImg}
+                onError={(e) => {
+                  e.currentTarget.src = '/images/avatar_recruiter_sarah_1792353150433.jpg';
+                }}
                 alt="HirePilot AI Recruiter Avatar"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
@@ -212,7 +216,10 @@ export const HirePilotChatbot: React.FC<Props> = ({
             <div className="flex items-center gap-2.5">
               <div className="relative w-8 h-8 rounded-full overflow-hidden border border-teal-400 bg-slate-800 shrink-0">
                 <img
-                  src="/src/assets/images/avatar_recruiter_sarah_1792353150433.jpg"
+                  src={recruiterAvatarImg}
+                  onError={(e) => {
+                    e.currentTarget.src = '/images/avatar_recruiter_sarah_1792353150433.jpg';
+                  }}
                   alt="Recruiter Sarah"
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"

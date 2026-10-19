@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, Bot, Sparkles, CheckCircle2, ShieldCheck, Compass } from 'lucide-react';
+import heroWorkspaceImg from '../../assets/images/hero_recruitment_workspace_1792353150210.jpg';
 
 interface Props {
   onExploreJobs: () => void;
@@ -65,7 +66,10 @@ export const Hero: React.FC<Props> = ({ onExploreJobs, onOpenChat }) => {
           <div className="lg:col-span-5 relative">
             <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-lg bg-slate-100 aspect-16/10 lg:aspect-4/3">
               <img
-                src="/src/assets/images/hero_recruitment_workspace_1792353150210.jpg"
+                src={heroWorkspaceImg}
+                onError={(e) => {
+                  e.currentTarget.src = '/images/hero_recruitment_workspace_1792353150210.jpg';
+                }}
                 alt="Modern technology workspace at Nexora Technologies"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"

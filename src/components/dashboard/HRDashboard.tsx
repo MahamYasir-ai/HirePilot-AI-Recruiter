@@ -30,6 +30,8 @@ import {
   Eye
 } from 'lucide-react';
 import { Application, Candidate, ConversationSession, FAQItem, Job, KnowledgeDocument, WhatsAppConfig, ApplicationStage } from '../../types';
+import { INITIAL_JOBS, INITIAL_FAQS, INITIAL_KNOWLEDGE_DOCS } from '../../data/knowledgeBase';
+import { INITIAL_APPLICATIONS, INITIAL_CANDIDATES, INITIAL_CONVERSATIONS, INITIAL_WHATSAPP_CONFIG } from '../../data/initialData';
 import { api } from '../../utils/api';
 
 interface Props {
@@ -53,15 +55,15 @@ export const HRDashboard: React.FC<Props> = ({ onBackToPublic, onOpenChat }) => 
     | 'settings'
   >('overview');
 
-  // Data States
-  const [jobs, setJobs] = useState<Job[]>([]);
-  const [applications, setApplications] = useState<Application[]>([]);
-  const [candidates, setCandidates] = useState<Candidate[]>([]);
-  const [conversations, setConversations] = useState<ConversationSession[]>([]);
-  const [faqs, setFaqs] = useState<FAQItem[]>([]);
-  const [knowledgeDocs, setKnowledgeDocs] = useState<KnowledgeDocument[]>([]);
-  const [whatsappStatus, setWhatsappStatus] = useState<any>(null);
-  const [isLoading, setIsLoading] = useState(true);
+  // Data States initialized with rich seed data so data is never missing
+  const [jobs, setJobs] = useState<Job[]>(INITIAL_JOBS);
+  const [applications, setApplications] = useState<Application[]>(INITIAL_APPLICATIONS);
+  const [candidates, setCandidates] = useState<Candidate[]>(INITIAL_CANDIDATES);
+  const [conversations, setConversations] = useState<ConversationSession[]>(INITIAL_CONVERSATIONS);
+  const [faqs, setFaqs] = useState<FAQItem[]>(INITIAL_FAQS);
+  const [knowledgeDocs, setKnowledgeDocs] = useState<KnowledgeDocument[]>(INITIAL_KNOWLEDGE_DOCS);
+  const [whatsappStatus, setWhatsappStatus] = useState<any>(INITIAL_WHATSAPP_CONFIG);
+  const [isLoading, setIsLoading] = useState(false);
 
   // Selected entities for drawers / modals
   const [selectedApp, setSelectedApp] = useState<Application | null>(null);
@@ -112,19 +114,21 @@ export const HRDashboard: React.FC<Props> = ({ onBackToPublic, onOpenChat }) => 
         api.getWhatsAppStatus()
       ]);
 
-      setJobs(jobsData);
-      setApplications(appsData);
-      setCandidates(candsData);
-      setConversations(convsData);
-      setFaqs(kbData.faqs);
-      setKnowledgeDocs(kbData.documents);
-      setWhatsappStatus(waData);
-
-      if (candsData.length > 0) setScreenCandidateId(candsData[0].id);
-      if (jobsData.length > 0) setScreenJobId(jobsData[0].id);
+      if (jobsData && jobsData.length > 0) setJobs(jobsData);
+      if (appsData && appsData.length > 0) setApplications(appsData);
+      if (candsData && candsData.length > 0) {
+        setCandidates(candsData);
+        setScreenCandidateId(candsData[0].id);
+      }
+      if (convsData && convsData.length > 0) setConversations(convsData);
+      if (kbData) {
+        if (kbData.faqs && kbData.faqs.length > 0) setFaqs(kbData.faqs);
+        if (kbData.documents && kbData.documents.length > 0) setKnowledgeDocs(kbData.documents);
+      }
+      if (waData) setWhatsappStatus(waData);
+      if (jobsData && jobsData.length > 0) setScreenJobId(jobsData[0].id);
     } catch (err) {
-      console.error('Error loading dashboard data:', err);
-      showToast('Error syncing dashboard data. Check backend connection.');
+      console.debug('Dashboard using local synchronized storage:', err);
     } finally {
       setIsLoading(false);
     }

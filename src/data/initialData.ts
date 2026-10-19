@@ -288,6 +288,83 @@ export const INITIAL_CONVERSATIONS: ConversationSession[] = [
         timestamp: '2:03 PM'
       }
     ]
+  },
+  {
+    id: 'conv-3',
+    channel: 'Website',
+    candidateName: 'Sofia Morales',
+    candidateEmail: 'sofia.morales.demo@example.com',
+    jobInterest: 'Frontend Developer',
+    startedAt: '2026-03-26 11:20:00',
+    lastMessageAt: '2026-03-26 11:35:10',
+    completedApplication: true,
+    messages: [
+      {
+        id: 'f-msg-1',
+        sender: 'bot',
+        text: "Hello! Welcome to Nexora Technologies. I'm HirePilot AI, your recruitment assistant. I can help you explore opportunities, understand job requirements, prepare for interviews, and walk you through a demo application. What would you like to do today?",
+        timestamp: '11:20 AM',
+        quickReplies: ['Explore Open Positions', 'Check My Job Match', 'Start an Application', 'Interview Preparation', 'Recruitment FAQs']
+      },
+      {
+        id: 'f-msg-2',
+        sender: 'user',
+        text: 'Interview Preparation',
+        timestamp: '11:21 AM'
+      },
+      {
+        id: 'f-msg-3',
+        sender: 'bot',
+        text: "Which position would you like to practice interview questions for?\n1. Junior Python Developer\n2. AI/ML Intern\n3. AI Automation Engineer\n4. Frontend Developer\n5. Full-Stack Developer",
+        timestamp: '11:21 AM',
+        quickReplies: ['Prep: Frontend', 'Prep: Junior Python', 'Prep: AI/ML Intern']
+      },
+      {
+        id: 'f-msg-4',
+        sender: 'user',
+        text: 'Prep: Frontend',
+        timestamp: '11:22 AM'
+      },
+      {
+        id: 'f-msg-5',
+        sender: 'bot',
+        text: "Here are 5 practice interview questions for Frontend Developer:\n1. Explain the distinct roles of HTML, CSS, and JavaScript in modern web development.\n2. How do you approach building a responsive interface that looks great across mobile and desktop?\n3. How does a frontend component make asynchronous API calls and handle loading states?\n4. Explain how React components and state updates trigger re-renders.\n5. How do you test and ensure an interface is accessible (WCAG AA)?\n\nWould you like to start a simulated application for this position?",
+        timestamp: '11:23 AM',
+        quickReplies: ['Start an Application', 'Explain React Components']
+      }
+    ]
+  },
+  {
+    id: 'conv-4',
+    channel: 'Website',
+    candidateName: 'Marcus Chen',
+    candidateEmail: 'marcus.chen.demo@example.com',
+    jobInterest: 'AI/ML Intern',
+    startedAt: '2026-03-24 16:40:00',
+    lastMessageAt: '2026-03-24 16:55:00',
+    completedApplication: true,
+    messages: [
+      {
+        id: 'm-msg-1',
+        sender: 'bot',
+        text: "Hello! Welcome to Nexora Technologies. I'm HirePilot AI, your recruitment assistant. What would you like to do today?",
+        timestamp: '4:40 PM',
+        quickReplies: ['Explore Open Positions', 'Check My Job Match', 'Start an Application']
+      },
+      {
+        id: 'm-msg-2',
+        sender: 'user',
+        text: 'Check My Job Match for AI/ML Intern. I know Python, pandas, scikit-learn, and cleaned sensor telemetry data.',
+        timestamp: '4:42 PM'
+      },
+      {
+        id: 'm-msg-3',
+        sender: 'bot',
+        text: "Your dataset exploration experience with pandas and scikit-learn appears strongly aligned with the AI/ML Intern role. Demonstrating model evaluation metrics (precision, recall, ROC-AUC) will further reinforce your profile. Would you like to practice technical interview questions or submit an application?",
+        timestamp: '4:43 PM',
+        quickReplies: ['Start an Application', 'Interview Preparation']
+      }
+    ]
   }
 ];
 
