@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-  <a href="YOUR_LIVE_DEMO_URL"><strong>🚀 Live Demo</strong></a>
+  <a href="hire-pilot-ai-recruiter.vercel.app"><strong>🚀 Live Demo</strong></a>
   &nbsp; · &nbsp;
   <a href="https://github.com/MahamYasir-ai/HirePilot-AI-Recruiter">GitHub Repository</a>
 </p>
