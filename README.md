@@ -1,125 +1,139 @@
  
 <div align="center">
-  <img src="assets/banner.png" alt="HirePilot AI Recruiter banner" width="100%">
+  <img src="assets/banner.png" alt="HirePilot AI Recruiter" width="100%">
 </div>
 
 <h1 align="center">HirePilot AI Recruiter</h1>
 
 <p align="center">
-  <strong>A smarter, AI-powered recruitment experience.</strong>
+  <strong>Smarter hiring. Better connections.</strong>
   <br>
-  Explore a modern recruitment interface designed to make hiring workflows more accessible, organized, and efficient.
+  An AI-focused recruitment web application exploring more accessible and efficient hiring workflows.
 </p>
 
 <p align="center">
-  <a href="https://hire-pilot-ai-recruiter.vercel.app/">
-    <strong>🚀 Live Demo</strong>
-  </a>
+  <a href="https://hire-pilot-ai-recruiter.vercel.app/"><strong>🚀 Live Demo</strong></a>
   &nbsp; · &nbsp;
-  <a href="https://github.com/MahamYasir-ai/HirePilot-AI-Recruiter">
-    GitHub Repository
-  </a>
+  <a href="https://github.com/MahamYasir-ai/HirePilot-AI-Recruiter">Source Code</a>
 </p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/AI-Recruitment-542C70?style=for-the-badge" alt="AI Recruitment">
-  <img src="https://img.shields.io/badge/Frontend-Web%20Application-FF4F9A?style=for-the-badge" alt="Web Application">
-  <img src="https://img.shields.io/badge/Status-In%20Development-FF873D?style=for-the-badge" alt="Project status">
+  <img src="https://img.shields.io/badge/Web-Application-FF4F9A?style=for-the-badge" alt="Web Application">
+  <img src="https://img.shields.io/badge/Deployed-Vercel-FF873D?style=for-the-badge" alt="Deployed on Vercel">
 </p>
 
 ---
 
 ## Overview
 
-HirePilot AI Recruiter is an AI-focused recruitment web application built to explore how intelligent interfaces can support the hiring process.
+HirePilot AI Recruiter is a recruitment-focused web application built to explore how AI-powered interfaces can support hiring workflows.
 
-The project brings recruitment-related interactions into a modern web experience, with an emphasis on usability, clear information presentation, and practical AI application development.
+The project brings recruitment-related interactions into a modern web experience, with an emphasis on usability, organized information, and practical AI application development.
 
 ## Features
 
 - **AI Recruitment Chatbot** — a conversational interface for recruitment-related interactions.
-- **Candidate Screening** — a recruitment workflow concept focused on reviewing candidate information.
-- **Job Management** — an interface for organizing job-related information.
-- **Recruitment Dashboard** — a centralized experience for recruitment-related information and insights.
-- **Modern User Interface** — a responsive, visually organized web experience.
-- **AI Application Development** — an exploration of integrating AI capabilities into a practical web application.
+- **Job Listings** — a place to explore job-related information.
+- **Candidate Applications** — supports the candidate application workflow where implemented.
+- **Recruitment Dashboard** — a centralized interface for recruitment-related information.
+- **Candidate Screening** — explores ways AI can assist with reviewing candidate information.
+- **Modern Web Interface** — a user-focused application experience.
+- **Deployment** — publicly accessible demo hosted on Vercel.
 
-*Feature availability depends on the current implementation of the application.*
+*The availability of individual features depends on the current application implementation.*
 
-## Tech Stack
+## Application Preview
 
-The repository includes a web application structure with the following technologies and tools:
+### 1. Home Page
 
-- **TypeScript**
-- **React-based frontend**
-- **Vite**
-- **Node.js**
-- **Vercel** for deployment
+![HirePilot AI Recruiter home page](assets/screenshots/01-homepage.png)
 
-The project also includes application configuration and server-related files. Refer to the repository source for the exact implementation details.
+### 2. AI Recruitment Chatbot
 
-## Project Structure
+![HirePilot AI recruitment chatbot](assets/screenshots/02-ai-chatbot.png)
 
-The repository contains the following key areas and files:
+### 3. Job Listings
 
-| File or folder | Purpose |
-|---|---|
-| `src/` | Application source code |
-| `public/` | Static assets |
-| `package.json` | Project dependencies and scripts |
-| `index.html` | HTML entry point |
-| `server.ts` | Server-related code |
-| `vercel.json` | Vercel deployment configuration |
-| `assets/` | Repository presentation assets, including the banner |
+![HirePilot job listings](assets/screenshots/03-job-listings.png)
 
-## Getting Started
+### 4. Candidate Application
 
-To explore the project locally, first clone the repository:
+![HirePilot candidate application](assets/screenshots/04-candidate-application.png)
+
+### 5. HR Dashboard
+
+![HirePilot recruitment dashboard](assets/screenshots/05-hr-dashboard.png)
+
+### 6. AI Candidate Screening
+
+![HirePilot candidate screening](assets/screenshots/06-candidate-screening.png)
+
+## Technology Stack
+
+The project repository includes a modern web application structure using:
+
+- TypeScript
+- React-based frontend
+- Vite
+- Node.js
+- Vercel deployment
+
+See the source code and `package.json` for the exact dependencies and configuration.
+
+## Run Locally
+
+### Prerequisites
+
+- Node.js and npm
+- Git
+
+### Installation
+
+Clone the repository:
 
 ```bash
 git clone https://github.com/MahamYasir-ai/HirePilot-AI-Recruiter.git
 cd HirePilot-AI-Recruiter
 ```
 
-Install the dependencies:
+Install dependencies:
 
 ```bash
 npm install
 ```
 
-Start the development server using the script defined in `package.json`. For many Vite projects, this is:
+Start the development server using the script configured in `package.json`. For a typical Vite application:
 
 ```bash
 npm run dev
 ```
 
-Check `package.json` if the development script differs. Any required API keys or environment variables should be configured according to the project's implementation.
+If the command differs, check the available scripts in `package.json`. Configure any required environment variables according to the project's implementation.
 
 ## Project Goals
 
-This project is part of my practical exploration of AI engineering and application development. It focuses on connecting AI-related workflows with usable web interfaces while developing skills in frontend integration, application structure, and deployment.
+This project is part of my practical journey into AI engineering and application development. It explores the intersection of conversational AI, recruitment workflows, and web interfaces while strengthening skills in building and presenting usable AI-powered applications.
 
-## Future Improvements
-
-Potential improvements as the project evolves:
+## Potential Improvements
 
 - Refine recruitment chatbot interactions.
 - Improve candidate review and screening workflows.
-- Enhance dashboard usability and data presentation.
-- Add clear validation, loading states, and error handling.
-- Document configuration and deployment requirements.
-- Include screenshots and demonstrations of implemented features.
+- Enhance dashboard usability and information presentation.
+- Add robust input validation and error handling.
+- Document API integrations and environment variables.
+- Expand testing and deployment documentation.
 
 ## Author
 
 **Maham Yasir**
 
-Electronics Engineering graduate building practical projects in AI, machine learning, automation, and web application development.
+Electronics Engineering graduate exploring AI engineering, machine learning, automation, and web application development.
 
 - GitHub: [@MahamYasir-ai](https://github.com/MahamYasir-ai)
 
 ---
 
 <p align="center">
-  <sub>Built as part of an ongoing journey into AI engineering and practical software development.</sub>
+  <sub>Building practical projects at the intersection of AI and software development.</sub>
 </p>
