@@ -12,9 +12,13 @@
 </p>
 
 <p align="center">
-  <a href="hire-pilot-ai-recruiter.vercel.app"><strong>🚀 Live Demo</strong></a>
+  <a href="https://hire-pilot-ai-recruiter.vercel.app/">
+    <strong>🚀 Live Demo</strong>
+  </a>
   &nbsp; · &nbsp;
-  <a href="https://github.com/MahamYasir-ai/HirePilot-AI-Recruiter">GitHub Repository</a>
+  <a href="https://github.com/MahamYasir-ai/HirePilot-AI-Recruiter">
+    GitHub Repository
+  </a>
 </p>
 
 <p align="center">
